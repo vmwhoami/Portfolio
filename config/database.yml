@@ -81,6 +81,6 @@ test:
 #
 production:
   <<: *default
-  database: Portfolio_production
-  username: Portfolio
-  password: <%= ENV['PORTFOLIO_DATABASE_PASSWORD'] %>
+  database: Portfolio
+  username: deploy
+  password: "filosofia"

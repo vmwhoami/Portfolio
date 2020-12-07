@@ -20,9 +20,9 @@ class RecentworksController < ApplicationController
   def create
     @portfolio_item = Recentwork.new(permited_params)
     3.times { @portfolio_item.technologies.build }
- 
+
     respond_to do |format|
-      if @portfolio_item.save 
+      if @portfolio_item.save
         format.html { redirect_to portfolio_path, notice: 'Portfolio item was successfully created' }
         format.json { render :show, status: :created, location: @portfolio_item }
       else
@@ -63,6 +63,6 @@ class RecentworksController < ApplicationController
   end
 
   def permited_params
-    params.require(:recentwork).permit(:title, :subtitle, :body, :github_link,:live_link, :main_image, :thumb_image , technologies_attributes: [:name])
+    params.require(:recentwork).permit(:title, :subtitle, :body, :github_link, :live_link, :main_image, :thumb_image, technologies_attributes: [:name])
   end
 end
