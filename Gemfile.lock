@@ -91,10 +91,7 @@ GEM
     capistrano-rbenv (2.2.0)
       capistrano (~> 3.1)
       sshkit (~> 1.3)
-    capistrano3-puma (5.0.2)
-      capistrano (~> 3.7)
-      capistrano-bundler
-      puma (>= 4.0, < 6.0)
+    chronic (0.10.2)
     coderay (1.1.3)
     concurrent-ruby (1.1.7)
     crass (1.0.6)
@@ -246,6 +243,8 @@ GEM
     websocket-driver (0.7.3)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
+    whenever (1.0.0)
+      chronic (>= 0.6.3)
     zeitwerk (2.4.0)
 
 PLATFORMS
@@ -257,10 +256,10 @@ DEPENDENCIES
   bootsnap (>= 1.4.2)
   byebug
   capistrano (~> 3.11)
+  capistrano-bundler (~> 2.0)
   capistrano-passenger (~> 0.2.0)
   capistrano-rails (~> 1.4)
   capistrano-rbenv (~> 2.1, >= 2.1.4)
-  capistrano3-puma
   devise (~> 4.7, >= 4.7.3)
   email_validator (~> 2.0, >= 2.0.1)
   friendly_id (~> 5.4.0)
@@ -280,6 +279,7 @@ DEPENDENCIES
   vmwhoami_copyright!
   web-console (>= 3.3.0)
   webpacker (~> 4.0)
+  whenever
 
 RUBY VERSION
    ruby 2.7.1p83
