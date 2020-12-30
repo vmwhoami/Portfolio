@@ -33,9 +33,10 @@
  
  .image{
   height: calc(100vh - 6rem);
-  min-width: 30rem;
+   width: 50vw;
   border-radius: 1.5rem;
   box-shadow: 0 0 1rem rgba(0,0,0,.9);
+
     @media screen and (max-width:$bp-md) {
       margin-top: 5rem;
       width: 30rem;
